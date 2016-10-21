@@ -13,16 +13,17 @@
                 "ketchup": ""
             }
         }, 
-        "avocado salad": {
+        "tacos": {
             "number_of_servings": 4, 
             "ingredients": {
-                "olive oil": "2 tbs", 
-                "dijon mustard": "1 tbs", 
-                "mixed greens": "8 oz", 
-                "avocados": "2", 
-                "salt": "", 
-                "ground pepper": "", 
-                "roasted pine nuts": "2 tbs"
+                "cheese": "12 oz", 
+                "tomatoes, sliced thinly": "2", 
+                "lbs ground beef": "2", 
+                "lettuce": "", 
+                "taco shells": "8", 
+                "salsa": "8 oz", 
+                "sour cream": "4 oz", 
+                "salt": ""
             }
         }
     }

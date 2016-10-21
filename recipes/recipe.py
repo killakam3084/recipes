@@ -22,8 +22,7 @@ class Recipe:
         self.ingredients_list = ingredients_list
         self.serving_size_override = int(serving_size_override)
 
-    def construct_ingredient_dict(self):
-        scale_factor = self.calculate_scale_factor(self.serving_size_override)
+    def construct_ingredient_dict(self, scale_factor):
         ingredient_dict = {}
         for item in self.ingredients_list:
             quantity_string = ""
@@ -39,10 +38,10 @@ class Recipe:
         return ingredient_dict
 
     def construct_json_rep_obj(self):
+        scale_factor = self.calculate_scale_factor(self.serving_size_override)
         return {self.name: {
-            'number_of_servings': self.serving_size * self.calculate_scale_factor(
-                self.serving_size_override),
-            'ingredients': self.construct_ingredient_dict()}}
+            'number_of_servings': self.serving_size * scale_factor,
+            'ingredients': self.construct_ingredient_dict(scale_factor)}}
 
     def calculate_scale_factor(self, serving_size_override):
         # Assuming the servings_number will multiple of self.servings_number
@@ -50,6 +49,7 @@ class Recipe:
         if int(serving_size_override) % self.serving_size == 0:
             scale_factor = serving_size_override / self.serving_size
         else:
-            print 'The requested serving size must be a multiple of the\
-                original serving size...Writing out ' + self.name + ' recipe as is...'
+            print 'The requested serving size must be a multiple of the original serving size.'
+            print 'Writing the original recipe for ' + self.name + ' as is....'
+
         return scale_factor
