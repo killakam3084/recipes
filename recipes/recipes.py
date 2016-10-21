@@ -92,6 +92,7 @@ def filter_output_dict(output_dict):
     """
     Function to construct a new output_dict excluding recipes with
     filter_ingredients
+
     :param output_dict: the filtered list if there exists items to filter by
     :return: the filtered list
     """
@@ -108,6 +109,7 @@ def filter_output_dict(output_dict):
 def construct_output_dict():
     """
     Iterate over the recipes and wrap them into a output dict
+
     :return: the output dictionary
     """
     list_of_recipes = construct_list_of_recipes()
@@ -123,6 +125,7 @@ def construct_output_dict():
 def dump_output_object(output_obj):
     """
     Encodes to json and dumps
+
     :param output_obj: the python of recipes to be encoded to json
     :return: return nothing
     """

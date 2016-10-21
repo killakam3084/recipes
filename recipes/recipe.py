@@ -11,6 +11,7 @@ class Recipe:
     def is_int(s):
         """
         Helper function to return if integer
+
         :param s: a string to decipher
         :return: bool T/F
         """
@@ -33,6 +34,7 @@ class Recipe:
                  ingredients_list):
         """
         Constructs an instance of a Recipe
+
         :param name: the name of the recipe
         :param serving_size: the number of servings a recipe makes
         :param serving_size_override: a multiple of the standard serving size
@@ -48,6 +50,7 @@ class Recipe:
         """
         A method that massages a list of ingredient tokens for a recipe into a
         dictionary
+
         :param scale_factor: the multiplier by which to scale ingredient quantities
         :return: a dictionary of ingredient/quantity key/value pairs
         """
@@ -68,6 +71,7 @@ class Recipe:
     def construct_json_rep_obj(self):
         """
         Creates a dictionary representation of the Recipe instance
+
         :return: the dictionary representation of the Recipe instance
         """
         scale_factor = self.calculate_scale_factor(self.serving_size_override)
@@ -78,6 +82,7 @@ class Recipe:
     def calculate_scale_factor(self, serving_size_override):
         """
         Calculates the multiplier by which to scale ingredients
+
         :param serving_size_override: a multiple of the standard serving size
         :return: the multiplier value
         """
