@@ -101,10 +101,8 @@ def filter_output_dict(output_dict):
     if filter_ingredients:
         filtered_dict = {k: v for k, v in
                          output_dict.iteritems() if
-                         any(ingredient == ingredient_key
-                             for ingredient in
-                             filter_ingredients for ingredient_key in
-                             v['ingredients'])}
+                         all(filter_item in v['ingredients']
+                             for filter_item in filter_ingredients)}
         return filtered_dict
     else:
         return output_dict
