@@ -3,27 +3,14 @@
         "burgers": {
             "number_of_servings": 6, 
             "ingredients": {
-                "tomatoes, sliced thinly": "2", 
+                "cheddar cheese": "6 slices", 
                 "mustard": "", 
-                "salt": "", 
-                "lbs ground beef": "2", 
+                "tomatoes, sliced thinly": "2", 
+                "ground beef": "2 lbs", 
                 "lettuce": "", 
                 "buns": "6", 
-                "slices cheddar cheese": "6", 
+                "salt": "", 
                 "ketchup": ""
-            }
-        }, 
-        "tacos": {
-            "number_of_servings": 4, 
-            "ingredients": {
-                "cheese": "12 oz", 
-                "tomatoes, sliced thinly": "2", 
-                "lbs ground beef": "2", 
-                "lettuce": "", 
-                "taco shells": "8", 
-                "salsa": "8 oz", 
-                "sour cream": "4 oz", 
-                "salt": ""
             }
         }
     }

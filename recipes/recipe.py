@@ -1,6 +1,3 @@
-from sets import Set
-
-
 class Recipe:
     """
     A class representing a Recipe encapsulating name, serving size, and
@@ -25,10 +22,10 @@ class Recipe:
     Collection of measurement types to ignore for parsing ingredient
     tokens
     """
-    measurement_set = Set(
-        ['bbl', 'cu', 'doz', 'F', 'fl', 'ft', 'gal', 'gr', 'gross',
-         'in', 'lb', 'oz', 'pt', 'qt', 'sq', 'T', 't', 'tbsp',
-         'tsp', 'tbs'])
+    measurement_set = {
+        'bbl', 'cu', 'doz', 'F', 'fl', 'ft', 'gal', 'gr', 'gross',
+        'in', 'lb', 'lbs', 'oz', 'pt', 'qt', 'sq', 'T', 't', 'tbsp',
+        'tsp', 'tbs', 'slices'}
 
     def __init__(self, name, serving_size, serving_size_override,
                  ingredients_list):
