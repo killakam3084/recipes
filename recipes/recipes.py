@@ -49,7 +49,7 @@ def construct_list_of_recipes():
 
         :return: returns the 2-D list of lists of recipe(s) tokens
     """
-    fn = os.path.join(os.path.dirname(__file__), '../recipe_files/recipe_0.txt')
+    fn = os.path.join(os.path.dirname(__file__), '../recipes_files/recipe_0.txt')
     sub_list = []
     with open(fn, 'r') as f:
         lines = [line if line == '\n' else line.rstrip('\n') for line in f]
@@ -129,7 +129,7 @@ def dump_output_object(output_obj):
     :param output_obj: the python of recipes to be encoded to json
     :return: return nothing
     """
-    fn = os.path.join(os.path.dirname(__file__), '../recipe_files/recipes.json')
+    fn = os.path.join(os.path.dirname(__file__), '../recipes_files/recipes.json')
     with open(fn, 'w') as outfile:
         json.dump(obj=output_obj, fp=outfile, indent=4)
 
