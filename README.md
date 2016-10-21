@@ -14,7 +14,11 @@
   + wraps these together
   + encodes the python dict to JSON and writes to file
 
-#### **To execute**
+#### _To execute_
+**Clone repository:** <https://github.com/killakam3084/recipes_repo>
+
+**Run the script:**
+
     usage: recipes.py [-h] [-s SERVING_SIZE] [-f FILTER_ITEMS]
 
     A vanilla program to convert flat text recipes to json
@@ -28,6 +32,17 @@
                           recipes by. Multi-word ingredients must be quoted.
     Certainly this isn't how Food Network does it
 
-#### Example
+#### _Example_
 	./recipes.py -s 4 -f "cheese,milk"
+
+#### *Assumptions*
+- The user only wants to scale up the recipe up by a multiple of original serving size
+- The input flat text adheres to the sample txt structure:
+	recipe name
+	serving size
+	ingredient 1
+	ingredient 2
+	...
+- Also chose to represent ingredients who don't have a defined quantity value
+   as empty "" in the json representation...seemed reasonable.
 
