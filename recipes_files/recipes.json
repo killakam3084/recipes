@@ -13,6 +13,26 @@
                 "ketchup": ""
             }
         }, 
+        "milkshake": {
+            "number_of_servings": 4, 
+            "ingredients": {
+                "oreos": "", 
+                "cups milk": "4", 
+                "cups vanilla ice cream": "4"
+            }
+        }, 
+        "avocado salad": {
+            "number_of_servings": 4, 
+            "ingredients": {
+                "olive oil": "2 tbs", 
+                "dijon mustard": "1 tbs", 
+                "mixed greens": "8 oz", 
+                "avocados": "2", 
+                "salt": "", 
+                "ground pepper": "", 
+                "roasted pine nuts": "2 tbs"
+            }
+        }, 
         "tacos": {
             "number_of_servings": 4, 
             "ingredients": {

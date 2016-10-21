@@ -49,7 +49,7 @@ def construct_list_of_recipes():
 
         :return: returns the 2-D list of lists of recipe(s) tokens
     """
-    fn = os.path.join(os.path.dirname(__file__), '../recipes_files/recipe_0.txt')
+    fn = os.path.join(os.path.dirname(__file__), '../recipes_files/recipes.txt')
     sub_list = []
     with open(fn, 'r') as f:
         lines = [line if line == '\n' else line.rstrip('\n') for line in f]
