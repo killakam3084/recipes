@@ -21,7 +21,7 @@ class Recipe:
             return False
 
     """
-    Collection of measurement types to ignore for parzing ingredient
+    Collection of measurement types to ignore for parsing ingredient
     tokens
     """
     measurement_set = Set(

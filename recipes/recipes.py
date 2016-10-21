@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import json
 import recipe
@@ -88,6 +89,12 @@ def construct_recipe_object(recipes_list):
 
 
 def filter_output_dict(output_dict):
+    """
+    Function to construct a new output_dict excluding recipes with
+    filter_ingredients
+    :param output_dict: the filtered list if there exists items to filter by
+    :return: the filtered list
+    """
     global filter_ingredients
     if filter_ingredients:
         filtered_dict = {k: v for k, v in
