@@ -4,15 +4,16 @@
 - a flat text file with sample recipes **recipes.txt**
 - the json file being written to after each program execution **recipes.json**
 
-#### **recipe.py**
-- Class definition of a *Recipe*
+#### **recipes/ contains:** 
 
-#### **recipes.py**
-- parses commandline arguments to scale surving size and filter for ingredients
-- instantiates Recipe objects 
-  + massages these instances to Python dictionaies
-  + wraps these together
-  + encodes the python dict to JSON and writes to file
+- **recipe.py**
+	- Class definition of a *Recipe*
+- **recipes.py**
+	- parses commandline arguments to scale surving size and filter for ingredients
+	- instantiates Recipe objects 
+	  + massages these instances to Python dictionaies
+	  + wraps these together
+	  + encodes the python dict to JSON and writes to file
 
 #### _To execute_
 **Clone repository:** <https://github.com/killakam3084/recipes_repo>
