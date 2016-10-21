@@ -76,15 +76,16 @@ def construct_recipe_object(recipes_list):
     recipe_name = recipes_list[0]
     serving_number_string = recipes_list[1].split(' ')
     recipe_serving_size = serving_number_string[1]
-    recipe_ingredients_list = [recipes_list[i] for i in range(2, len(recipes_list))]
+    recipe_ingredients_list = [recipes_list[i] for i in
+                               range(2, len(recipes_list))]
     if serving_size_override:
         recipe_obj = recipe.Recipe(recipe_name, recipe_serving_size,
-                            serving_size_override,
-                            recipe_ingredients_list)
+                                   serving_size_override,
+                                   recipe_ingredients_list)
     else:
         recipe_obj = recipe.Recipe(recipe_name, recipe_serving_size,
-                            recipe_serving_size,
-                            recipe_ingredients_list)
+                                   recipe_serving_size,
+                                   recipe_ingredients_list)
     return recipe_obj
 
 
@@ -100,11 +101,13 @@ def filter_output_dict(output_dict):
     if filter_ingredients:
         filtered_dict = {k: v for k, v in
                          output_dict.iteritems() if
-                         all(ingredient in v['ingredients'] for ingredient in
-                             filter_ingredients)}
+                         any(ingredient in ingredient_keys
+                             for ingredient in
+                             filter_ingredients for ingredient_keys in v['ingredients'])}
         return filtered_dict
     else:
         return output_dict
+
 
 def construct_output_dict():
     """
@@ -122,6 +125,7 @@ def construct_output_dict():
     output_dict = filter_output_dict(output_dict)
     return {'recipes': output_dict}
 
+
 def dump_output_object(output_obj):
     """
     Encodes to json and dumps
@@ -129,7 +133,8 @@ def dump_output_object(output_obj):
     :param output_obj: the python of recipes to be encoded to json
     :return: return nothing
     """
-    fn = os.path.join(os.path.dirname(__file__), '../recipes_files/recipes.json')
+    fn = os.path.join(os.path.dirname(__file__),
+                      '../recipes_files/recipes.json')
     with open(fn, 'w') as outfile:
         json.dump(obj=output_obj, fp=outfile, indent=4)
 
