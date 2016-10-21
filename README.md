@@ -2,8 +2,8 @@
 ---
 #### **recipes_files/ contains:** 
 - a flat text file with sample recipes **recipes.txt**
-- Also present in the json file being written to after each program execution recipes.json
-- 
+- the json file being written to after each program execution **recipes.json**
+
 #### **recipe.py**
 - Class definition of a *Recipe*
 
