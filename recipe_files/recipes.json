@@ -1,0 +1,29 @@
+{
+    "recipes": {
+        "burgers": {
+            "number_of_servings": 6, 
+            "ingredients": {
+                "tomatoes, sliced thinly": "2", 
+                "mustard": "", 
+                "salt": "", 
+                "lbs ground beef": "2", 
+                "lettuce": "", 
+                "buns": "6", 
+                "slices cheddar cheese": "6", 
+                "ketchup": ""
+            }
+        }, 
+        "avocado salad": {
+            "number_of_servings": 4, 
+            "ingredients": {
+                "olive oil": "2 tbs", 
+                "dijon mustard": "1 tbs", 
+                "mixed greens": "8 oz", 
+                "avocados": "2", 
+                "salt": "", 
+                "ground pepper": "", 
+                "roasted pine nuts": "2 tbs"
+            }
+        }
+    }
+}
