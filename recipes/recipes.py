@@ -1,8 +1,9 @@
 #!/usr/bin/env python
-import os
 import json
-import recipe
 import argparse
+import textwrap
+
+import recipe
 
 
 def split_cmdline_filter_items(string):
@@ -24,11 +25,28 @@ def parse_arguments():
     """
     global parser
     parser = argparse.ArgumentParser(
-        description='A vanilla program to convert flat text recipes to json',
-        epilog='Certainly this isn\'t how Food Network does it')
+        description='Certainly this isn\'t how Food Network does it',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=textwrap.dedent('''
+                                    Recipe List must appear as follows. **
+                                    =======
+                                    recipe_name
+                                    serveing_size
+                                    ingredient 0
+                                    ingredient 1
+                                    ingredient 2
+                                    ...
+                                    ...
+                                    ...
+                                    ingredient n
+    '''))
+    parser.add_argument('input_file',
+                        help="An input text file to read in recipes from. "
+                             "Must adhere certain structure.**")
+    parser.add_argument('out_file', help="File to write json recipe data to.")
     parser.add_argument('-s', '--serving-size', type=str,
                         help='The number of servings you\'d like to make.',
-                        dest='serving_size')
+                        dest='serving_size', default=4)
     parser.add_argument('-f', '--filter-items', type=split_cmdline_filter_items,
                         dest='filter_items',
                         help='A comma delimited string of ingredients to filter recipes by. '
@@ -49,9 +67,8 @@ def construct_list_of_recipes():
 
         :return: returns the 2-D list of lists of recipe(s) tokens
     """
-    fn = os.path.join(os.path.dirname(__file__), '../recipes_files/recipes.txt')
     sub_list = []
-    with open(fn, 'r') as f:
+    with open(args.input_file, 'r') as f:
         lines = [line if line == '\n' else line.rstrip('\n') for line in f]
 
     recipes_list = []
@@ -132,9 +149,7 @@ def dump_output_object(output_obj):
     :param output_obj: the python of recipes to be encoded to json
     :return: return nothing
     """
-    fn = os.path.join(os.path.dirname(__file__),
-                      '../recipes_files/recipes.json')
-    with open(fn, 'w') as outfile:
+    with open(args.out_file, 'w') as outfile:
         json.dump(obj=output_obj, fp=outfile, indent=4)
 
 

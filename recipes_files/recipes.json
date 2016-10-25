@@ -12,6 +12,19 @@
                 "salt": "", 
                 "ketchup": ""
             }
+        }, 
+        "tacos": {
+            "number_of_servings": 4, 
+            "ingredients": {
+                "cheese": "12 oz", 
+                "tomatoes, sliced thinly": "2", 
+                "ground beef": "2 lbs", 
+                "lettuce": "", 
+                "taco shells": "8", 
+                "salsa": "8 oz", 
+                "sour cream": "4 oz", 
+                "salt": ""
+            }
         }
     }
 }
