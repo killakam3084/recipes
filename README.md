@@ -1,4 +1,4 @@
-ecipe Converter
+Recipe Converter
 ---
 #### **recipes_files/ contains:** 
 - a flat text file with sample recipes **recipes.txt**
