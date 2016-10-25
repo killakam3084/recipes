@@ -1,0 +1,5 @@
+#!/usr/local/env python
+
+from recipes import recipes
+
+recipes.main()

@@ -2,7 +2,6 @@
 import json
 import argparse
 import textwrap
-
 import recipe
 
 
@@ -153,6 +152,7 @@ def dump_output_object(output_obj):
         json.dump(obj=output_obj, fp=outfile, indent=4)
 
 
-parse_arguments()
-output_obj = construct_output_dict()
-dump_output_object(output_obj)
+def main():
+    parse_arguments()
+    output_obj = construct_output_dict()
+    dump_output_object(output_obj)
