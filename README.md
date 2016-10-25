@@ -63,5 +63,6 @@ ecipe Converter
     ...
 - Also chose to represent ingredients who don't have a defined quantity value
    as empty "" in the json representation...seemed reasonable.
+- And per the problem formulation just filtering exact string matches..."cheese" won't find "cheddar cheese" and vice versa.
 
 
